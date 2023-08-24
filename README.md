@@ -1,7 +1,7 @@
 
 # ClinicInternshipApp
 
-This project is a web application that can be used by doctors who want to track their appoinments by day and have a record history of all the appointments had in the past or that are to come.
+This project is a web application that can be used by doctors who want to track their daily appoinments and have a record history of all the appointments had or future ones.
 It can be also used by the user that has a pacient status who needs to make a doctor appointment to either a specific doctor or clinic or specialty. As a pacient you can also see your future and past appointments.
 The project also has an Admin side that handles all 4 entities in the app ( clinic, doctor, specialty, service).
 
