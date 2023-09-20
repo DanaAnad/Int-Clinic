@@ -3,3 +3,11 @@
     height: 2.125rem;
     width: 2.125rem;
 }
+.centered-toolbar ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo {
+    display: block;
+  }
