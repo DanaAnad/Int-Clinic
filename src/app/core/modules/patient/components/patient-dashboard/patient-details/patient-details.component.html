@@ -1,7 +1,6 @@
 <div class="information">
   <div class="information__header">
-    <h3>Informațiile dumneavoastră:</h3>
-    <button mat-stroked-button routerLink="../edit">Editează</button>
+    <h3>Informațiile tale:</h3>
   </div>
   <mat-card class="details-card">
     <div class="details-card__text">
@@ -13,6 +12,14 @@
       <p class="light-text">{{ user?.email }}</p>
       <h4>Gen</h4>
       <p>{{ user?.gender }}</p>
+      <button mat-stroked-button routerLink="../edit">Editează</button>
+      <button
+        mat-stroked-button
+        color="warn"
+        id="delete-button"
+        (click)="confirmDeleteDialog(user?.uid, user.displayName)">
+        Sterge Profilul
+      </button>
     </div>
     <div class="details-card__img">
       <img src="{{ user?.imageUrl }}" alt="" />

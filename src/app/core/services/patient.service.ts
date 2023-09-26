@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { DocumentData } from '@angular/fire/compat/firestore';
-import { Firestore, doc, getDoc, updateDoc } from '@angular/fire/firestore';
+import { Firestore, doc, getDoc, updateDoc, deleteDoc } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root',
@@ -26,5 +26,10 @@ export class PatientService {
           console.log(err);
         });
     }
+  }
+
+  deletePatient(id: string): Observable<void> {
+    const selectedPatient = doc(this.firestore, 'patients', id);
+    return from(deleteDoc(selectedPatient));
   }
 }
